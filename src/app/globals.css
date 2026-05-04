@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-dark: #022f4d;
+  --color-brand-deep: #01416d;
+}
+
+html, body { color: var(--color-brand-dark); }
+body { font-family: var(--font-rubik), system-ui, sans-serif; }
+
+h1, h2, h3, h4, h5 { color: var(--color-brand-deep); }
+
+.container-pad { @apply mx-auto max-w-container px-5 sm:px-8; }
+.btn-primary { @apply inline-flex items-center justify-center rounded-lg bg-brand-deep px-8 py-3 font-medium text-white transition hover:bg-brand-dark; }
+.btn-pink    { @apply inline-flex items-center justify-center rounded-lg bg-brand-pink  px-8 py-3 font-medium text-white transition hover:opacity-90; }
+
+.h-display { @apply text-4xl font-bold sm:text-5xl md:text-6xl; }
+.h-section { @apply text-3xl font-bold sm:text-4xl; }
+
+/* HoneyBook embed sizing */
+.hb-embed { min-height: 600px; }
