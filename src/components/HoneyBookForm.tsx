@@ -3,15 +3,17 @@ import { useEffect } from "react";
 
 export function HoneyBookForm({ heading = "Request a Quote", subheading = "Fill out the form below and we'll get back to you within 24 hours." }) {
   useEffect(() => {
-    if (document.getElementById("hb-loader-script")) return;
+    // Remove any existing HoneyBook script so it re-scans the DOM on every mount
+    const existing = document.getElementById("hb-loader-script");
+    if (existing) existing.remove();
+
+    // @ts-ignore
+    window._HB_ = { pid: "66ecfa7460fe58002c3ab66d" };
+
     const script = document.createElement("script");
     script.id = "hb-loader-script";
     script.async = true;
     script.src = "https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js";
-    // @ts-ignore
-    window._HB_ = window._HB_ || {};
-    // @ts-ignore
-    window._HB_.pid = "66ecfa7460fe58002c3ab66d";
     document.body.appendChild(script);
   }, []);
   return (

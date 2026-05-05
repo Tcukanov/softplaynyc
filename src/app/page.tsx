@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const services = [
   { title: "Ball Pit Rentals", img: "/assets/images/img-585496fe.avif", href: "/ball-pit", desc: "Luxury ball pits for parties from $299. Delivery and setup included.", price: "from $299" },
-  { title: "Bounce House Rentals", img: "/assets/images/img-1af35a9f.avif", href: "/bounce-house", desc: "Modern, beautiful bounce houses safe for kids. Starting from $199.", price: "from $199" },
+  { title: "Bounce House Rentals", img: "/assets/images/bh-white-medium.webp", href: "/bounce-house", desc: "Modern, beautiful bounce houses safe for kids. Starting from $199.", price: "from $199" },
   { title: "Soft Play Sets", img: "/assets/images/img-66c4a0de.avif", href: "/soft-play", desc: "Premium soft play sets for toddlers — colorful, safe, fun.", price: "Premium sets" },
 ];
 
@@ -25,6 +25,7 @@ export default function HomePage() {
         title="Soft Play Rentals for Unforgettable Parties"
         description="Ball pits, bounce houses, and soft play sets for kids' birthday parties, baby showers, and corporate events across New York and New Jersey."
         ctaText="Get Your Quote"
+        sideImage="/assets/images/img-ee523d38.avif"
       />
 
       {/* Services grid */}
